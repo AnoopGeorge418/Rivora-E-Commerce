@@ -55,3 +55,4 @@ The project combines modern marketplace architecture with intelligent AI modules
 
 **⚠️ Note**
 **Rivora is a learning-focused project designed to experiment with real AI systems and engineering concepts rather than replicate industry-scale infrastructure.**
+
