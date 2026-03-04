@@ -1,12 +1,73 @@
 [project]
 name = "backend"
 version = "0.1.0"
-description = "Add your description here"
+description = "A full scalable backend that handles admin, user, vendor and AI modules of Rivora application."
 readme = "README.md"
-requires-python = ">=3.14"
-dependencies = [
-    "fastapi[standard]>=0.135.0",
-    "pydantic>=2.12.5",
-    "python-dotenv>=1.2.2",
-    "uvicorn[standard]>=0.41.0",
+requires-python = ">=3.12"
+
+authors = [
+    { name = "Anoop George", email = "anoopgeorge418@gmail.com" }
 ]
+
+maintainers = [
+    { name = "Anoop George", email = "anoopgeorge418@gmail.com" }
+]
+
+dependencies = [
+    "bcrypt>=5.0.0",
+    "fastapi[standard]>=0.110.0",
+    "phonenumbers>=9.0.25",
+    "psycopg2-binary>=2.9.11",
+    "pydantic>=2.6.0",
+    "python-dotenv>=1.0.0",
+    "sqlalchemy>=2.0.48",
+    "uvicorn[standard]>=0.27.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/AnoopGeorge418/Rivora-E-Commerce"
+Repository = "https://github.com/AnoopGeorge418/Rivora-E-Commerce"
+Issues = "https://github.com/AnoopGeorge418/Rivora-E-Commerce/issues"
+
+# DEV DEPENDENCIES
+[project.optional-dependencies]
+dev = [
+    "black>=24.0.0",
+    "ruff>=0.3.0",
+    "sphinx>=9.1.0",
+]
+
+# BLACK CONFIG
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | venv
+  | build
+  | dist
+  | migrations
+)/
+'''
+
+# RUFF CONFIG
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["app"]
+
+[dependency-groups]
+dev = [
+    "sphinx>=9.1.0",
+]
+
+# SPHINX CONFIG
+
