@@ -1,5 +1,7 @@
-from .user_model import User
-from .identity_model import Identity
-from .otp_model import OtpCode
+from .auth_model.user_model import User
+from .auth_model.identity_model import Identity
+from .auth_model.otp_model import OTP
+from .auth_model.session_model import Session
+from .auth_model.magic_link_model import MagicLink
 
-__all__ = ["User", "Identity", "OtpCode"] # These are intentional import -- for pylance
+__all__ = ["User", "Identity", "OTP", "Session", "MagicLink"] # These are intentional import -- for pylance
